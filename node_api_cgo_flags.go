@@ -5,7 +5,7 @@ package napi
 #cgo CFLAGS: -D_DEBUG
 #cgo CFLAGS: -DV8_ENABLE_CHECKS
 #cgo CFLAGS: -DNAPI_EXPERIMENTAL
-#cgo CFLAGS: -I/usr/local/include/node
+
 #cgo CXXFLAGS: -std=c++11
 
 #cgo darwin LDFLAGS: -Wl,-undefined,dynamic_lookup
@@ -17,5 +17,7 @@ package napi
 
 #cgo LDFLAGS: -L${SRCDIR}
 #cgo LDFLAGS: -stdlib=libc++
+
+#cgo CFLAGS: -I${NODE_INCLUDE_PATH}
 */
 import "C"
